@@ -14,8 +14,8 @@ class OrangeTree
   end
 
   def oneYearPasses
-    @age = @age + 1
-    @height = @height + 10
+    @age += 1
+    @height += 10
     @oranges = 0
 
     puts "Your tree is now 1 year older so it got #{@age} year and it grew aditional 10 cm so it is now #{@height} cm tall!"
@@ -26,7 +26,7 @@ class OrangeTree
 
     if @age > 2
       @age.times do
-        @oranges = @oranges + 1
+        @oranges += 1
       end
     end
   end
@@ -39,10 +39,10 @@ class OrangeTree
   def pickAnOrange
 
     if @orangeCount > 1
-      @orangeCount = @orangeCount - 1
+      @orangeCount -= 1
       puts "Mmm that was perfect orange. You still got #{@orangeCount} left on your tree but do not be greedy!"
     elsif @orangeCount == 1
-      @orangeCount = @orangeCount - 1
+      @orangeCount -= 1
       puts "Mmm that was perfect orange. That was last orange so you have to wait for new ones next year."
     else
       puts "Sorry you already ate all oranges.."
